@@ -9,7 +9,7 @@ class Article extends Component{
         }
     }
     handleToggle(){
-        this.setState({isOpen: !this.state.isOpen})
+        this.setState({isOpen: !this.state.isOpen});
     }
     render(){
         let data = this.props.data;

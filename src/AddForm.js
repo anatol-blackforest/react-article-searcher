@@ -7,7 +7,6 @@ function AddForm(props){
         <p><input type="text" style={{backgroundColor: props.titleValid ? "#fff" : "red"}} ref={props.title} /></p>
         <p>Текст:</p>
         <p><textarea type="text" style={{backgroundColor: props.textValid ? "#fff" : "red"}} ref={props.text} ></textarea></p>
-        <input type="color" ref={props.color} />
         <input type="submit" />
     </form>
 }

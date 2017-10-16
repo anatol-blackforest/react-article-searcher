@@ -12,7 +12,7 @@ class App extends Component{
         this.resetHandler = this.resetHandler.bind(this);
         this.deleteHandler = this.deleteHandler.bind(this);
         this.updateHandler = this.updateHandler.bind(this);
-        this.data = [...this.props.data];
+        this.data = [...this.props.data].reverse();
         this.dataForRender = [...this.data];
         this.state = {
             nothingFind: false,
@@ -27,10 +27,9 @@ class App extends Component{
             let newArticle = {
                 id: Date.now(),
                 title: this.title.value,
-                text: this.text.value,
-                color: this.color.value
+                text: this.text.value
             }
-            this.data.push(newArticle);
+            this.data.unshift(newArticle);
             this.dataForRender = [...this.data];
             this.title.value = "";
             this.text.value = "";
@@ -88,7 +87,6 @@ class App extends Component{
                 addNewArticle={this.addNewArticle} 
                 title={title => this.title = title} 
                 text={text => this.text = text} 
-                color={color => this.color = color} 
             />
             <SearchForm 
                 nothingFind={this.state.nothingFind} 
