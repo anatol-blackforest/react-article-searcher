@@ -34,14 +34,12 @@ class App extends Component{
             this.title.value = "";
             this.text.value = "";
             this.setState({textValid: true, titleValid: true});
+        }else if(!this.title.value && this.text.value){
+            this.setState({textValid: true, titleValid: false});
+        }else if(!this.text.value && this.title.value){
+            this.setState({textValid: false, titleValid: true});
         }else{
-            if(!this.title.value && !this.text.value){
-                this.setState({textValid: false, titleValid: false});
-            }else if(!this.title.value && this.text.value){
-                this.setState({textValid: true, titleValid: false});
-            }else if(!this.text.value && this.title.value){
-                this.setState({textValid: false, titleValid: true});
-            }
+            this.setState({textValid: false, titleValid: false});
         }
     }
     deleteHandler(id){
