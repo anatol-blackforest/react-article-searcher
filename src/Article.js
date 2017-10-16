@@ -20,8 +20,8 @@ class Article extends Component{
             <p>{data.text}</p>
             {
                 this.state.isOpen ? (<form onSubmit={(e) =>  this.props.updateHandler(e, this.props.id)}>
-                    <p><input type="text" className="update-title" placeholder={data.title} /></p>
-                    <p><textarea className="update-text" placeholder={data.text} ></textarea></p>
+                    <p><input type="text" className="update-title" defaultValue={data.title} /></p>
+                    <p><textarea className="update-text" defaultValue={data.text} ></textarea></p>
                     <input type="submit" />
                 </form>) : null
             }
