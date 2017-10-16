@@ -1,0 +1,13 @@
+[{
+    "id": 0,
+    "title": "Article 1",
+    "text": "Lorem ipsum dolor sit amet"
+},{
+    "id": 1,
+    "title": "Article 2",
+    "text": "Lorem ipsum dolor sit amet"
+},{
+    "id": 2,
+    "title": "Article 3",
+    "text": "Lorem ipsum dolor sit amet"
+}]
