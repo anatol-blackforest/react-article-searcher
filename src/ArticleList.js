@@ -10,7 +10,7 @@ class ArticleList extends Component{
             id={item.id} 
             data={item}
         />);
-        return <ul>{data}</ul>
+        return <ul>{data.reverse()}</ul>
     }
 }
 

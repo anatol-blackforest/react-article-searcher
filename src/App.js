@@ -12,7 +12,7 @@ class App extends Component{
         this.resetHandler = this.resetHandler.bind(this);
         this.deleteHandler = this.deleteHandler.bind(this);
         this.updateHandler = this.updateHandler.bind(this);
-        this.data = [...this.props.data].reverse();
+        this.data = [...this.props.data];
         this.dataForRender = [...this.data];
         this.state = {
             nothingFind: false,
@@ -29,7 +29,7 @@ class App extends Component{
                 title: this.title.value,
                 text: this.text.value
             }
-            this.data.unshift(newArticle);
+            this.data.push(newArticle);
             this.dataForRender = [...this.data];
             this.title.value = "";
             this.text.value = "";
