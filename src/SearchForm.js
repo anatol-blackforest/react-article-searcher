@@ -1,5 +1,5 @@
 import React from 'react';
-
+//компонент поиска
 function SearchForm(props){
     return  <div>
         <form  onSubmit={props.searchHandler} >

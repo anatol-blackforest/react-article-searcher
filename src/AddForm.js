@@ -1,5 +1,5 @@
 import React from 'react';
-
+//форма добавления новой записи
 function AddForm(props){
     return  <form className="addform" onSubmit={props.addNewArticle}>
         <h2>Добавить:</h2>

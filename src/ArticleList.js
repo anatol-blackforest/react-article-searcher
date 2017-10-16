@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Article from './Article';
-
+//список всех записей
 class ArticleList extends Component{
     render(){
         const data = this.props.data.map(item => <Article 

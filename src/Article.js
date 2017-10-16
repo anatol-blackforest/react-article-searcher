@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+//компонент единичной записи
 class Article extends Component{
     constructor(props){
         super(props);

@@ -3,7 +3,7 @@ import {findDOMNode} from 'react-dom';
 import ArticleList from './ArticleList';
 import AddForm from './AddForm';
 import SearchForm from './SearchForm';
-
+//компонент приложения
 class App extends Component{
     constructor(props){
         super(props);
@@ -20,6 +20,7 @@ class App extends Component{
             textValid: true
         };
     }
+    //добавляем новую запись
     addNewArticle(e){
         e.preventDefault();
         if(this.title.value && this.text.value){
@@ -42,6 +43,7 @@ class App extends Component{
             this.setState({textValid: false, titleValid: false});
         }
     }
+    //удаляем запись
     deleteHandler(id){
         this.data.forEach((item, index, arr) => {
             if (item.id === id){
@@ -51,6 +53,7 @@ class App extends Component{
             }
         });
     }
+    //редактируем запись
     updateHandler(e, id){
         e.preventDefault();
         this.data.forEach((item, index, arr) => {
@@ -62,6 +65,7 @@ class App extends Component{
             }
         });
     }
+    //поиск
     searchHandler(e){
         e.preventDefault();
         this.dataForRender = this.data.filter(item => {
@@ -70,10 +74,12 @@ class App extends Component{
         });
         this.setState({nothingFind: this.dataForRender.length ? false : true});
     }
+    //сброс результатов поиска
     resetHandler(){
         this.dataForRender = [...this.data];
         this.setState({nothingFind: false});
     }
+    //вывод плагина
     render(){
         return <div className="app">
             <AddForm 
